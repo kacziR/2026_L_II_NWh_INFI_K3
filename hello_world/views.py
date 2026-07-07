@@ -1,3 +1,4 @@
+# flake8: noqa
 from flask import request
 from hello_world import app
 from hello_world.formater import SUPPORTED, PLAIN
