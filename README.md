@@ -50,11 +50,18 @@ o Continuous Integration, Continuous Delivery i Continuous Deployment.
   # aktywacja 
   $ source .venv/Source/activate
   ```
+  Integracja z CircleCI:
+  Projekt został zintegrowany z platformą CircleCI. Pipeline automatycznie uruchamia testy, sprawdzanie kodu linterem oraz budowanie i wysyłanie obrazu na Docker Hub.
 
-- Integracja z TravisCI:
+- Automatyzacja za pomocą Makefile:
 
   ```
-  # miejsce na twoje notatki
+  $ make deps          # Instalacja zależności
+  $ make lint          # Walidacja czystości kodu (flake8)
+  $ make run           # Lokalny start aplikacji
+  $ make test          # Uruchomienie testów (pytest)
+  $ make docker_build  # Budowanie obrazu Docker
+  $ make docker_push   # Logowanie i push obrazu do Docker Hub
   ```
 
 # Pomocnicze
@@ -84,3 +91,5 @@ o Continuous Integration, Continuous Delivery i Continuous Deployment.
   $ yum install -y docker-ce
   $ systemctl start docker
   ```
+Autor projektu: Adam Kaczała  
+Grupa: 2026_L_II_NWh_INFI_K3
